@@ -2,23 +2,44 @@ This project helps to find the moving objects from a environment
 
 The code has been shared and the line by line explanation is as follows ;
 
-#1   ->  import cv2                 -> This project is made on ComputerVision so cv2 is imported
+#1   ->  import cv2                
 
-#2   ->  import imutils             -> This imutils library is used to resize the image
+-> This project is made on ComputerVision so cv2 is imported
 
-#3   ->  cam = cv2.VideoCapture (0) -> This line helps to use the camera of the device 0 for default or inbuilt cam ; 1 for external cam
+#2   ->  import imutils            
 
-#4   ->  firstFrame=None            -> Initialize the firstFrame
+-> This imutils library is used to resize the image
 
-#5   ->  area = 500                 -> Initialize area to 500
+#3   ->  cam = cv2.VideoCapture (0) 
 
-#6   ->  while True:                -> Infinite loop ; It will continue till the Normal screen and Moving Object detected gets detected
 
-#7   ->  _,img = cam.read()         -> Used to read from camera ; _ is used to avoid True or False as we need only values ; frames from camera is read and stored in img
+-> This line helps to use the camera of the device 0 for default or inbuilt cam ; 1 for external cam
 
-#8   ->  text = "Normal"            -> Initializing text to Normal ; If no moving object is detected then Normal text will be shown
+#4   ->  firstFrame=None           
 
-#9   ->  img = imutils.resize(img, width=1000)           -> Using imutils library resize the video streaming window and setting width to 100
+-> Initialize the firstFrame
+
+#5   ->  area = 500               
+
+-> Initialize area to 500
+
+#6   ->  while True:              
+
+
+-> Infinite loop ; It will continue till the Normal screen and Moving Object detected gets detected
+
+#7   ->  _,img = cam.read()        
+
+
+-> Used to read from camera ; _ is used to avoid True or False as we need only values ; frames from camera is read and stored in img
+
+#8   ->  text = "Normal"            
+
+-> Initializing text to Normal ; If no moving object is detected then Normal text will be shown
+
+#9   ->  img = imutils.resize(img, width=1000)        
+
+-> Using imutils library resize the video streaming window and setting width to 100
 
 #10  ->  grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  -> Using cv2 img is converted into gray scale image
 
