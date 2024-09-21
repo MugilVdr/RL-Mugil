@@ -1,7 +1,5 @@
 import cv2   #opencv
-
 import imutils  #resize
-
 cam = cv2.VideoCapture(0)  #cam id
 
 firstFrame=None
